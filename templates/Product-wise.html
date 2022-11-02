@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h4><strong>Product Category-wise Revenue break-up:</strong></h4>
+    <form id="ProductCategory1" action="{{ url_for('Productwise') }}" method="POST">
+        <label for="ProductCategory">Select Product Category: </label>
+        <select name="ProductCategory" id="ProductCategory" onchange="category2(this)">
+            <option disabled selected>Select</option>
+            <option value ="Food container">Food container</option>
+            <option value ="Dinnerware">Dinnerware</option>
+            <option value ="Cookware">Cookware</option>
+            <option value ="Coffee/Tea">Coffee/Tea</option>
+            <option value ="Glassware/Jugs">Glassware/Jugs</option>
+        </select>
+        <br></br>
+        <br><Strong>Select Date:</Strong></br>
+        <br>From:</br>
+        <label for="Date1">Date</label>
+        <select name="Date1" id="Date1" onchange="category5(this)">
+            <option disabled selected>Select</option>
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+            <option value ="4">4</option>
+            <option value ="5">5</option>
+            <option value ="6">6</option>
+            <option value ="7">7</option>
+            <option value ="8">8</option>
+            <option value ="9">9</option>
+            <option value ="10">10</option>
+            <option value ="11">11</option>
+            <option value ="12">12</option>
+            <option value ="13">13</option>
+            <option value ="14">14</option>
+            <option value ="15">15</option>
+            <option value ="16">16</option>
+            <option value ="17">17</option>
+            <option value ="18">18</option>
+            <option value ="19">19</option>
+            <option value ="20">20</option>
+            <option value ="21">21</option>
+            <option value ="22">22</option>
+            <option value ="23">23</option>
+            <option value ="24">24</option>
+            <option value ="25">25</option>
+            <option value ="26">26</option>
+            <option value ="27">27</option>
+            <option value ="28">28</option>
+            <option value ="29">29</option>
+            <option value ="30">30</option>
+            <option value ="31">31</option>
+        </select>
+        <label for="Month1">Month</label>
+        <select name="Month1" id="Month1" onchange="category6(this)">
+            <option disabled selected>Select</option>
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+            <option value ="4">4</option>
+            <option value ="5">5</option>
+            <option value ="6">6</option>
+            <option value ="7">7</option>
+            <option value ="8">8</option>
+            <option value ="9">9</option>
+            <option value ="10">10</option>
+            <option value ="11">11</option>
+            <option value ="12">12</option>
+        </select>
+        <label for="Year1">Year</label>
+        <select name="Year1" id="Year1" onchange="category7(this)">
+            <option disabled selected>Select</option>
+            <option value ="2020">2020</option>
+            <option value ="2021">2021</option>
+            </select>
+        <br></br>
+        To:<br></br>
+        <label for="Date2">Date</label>
+        <select name="Date2" id="Date2" onchange="category8(this)">
+            <option disabled selected>Select</option>
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+            <option value ="4">4</option>
+            <option value ="5">5</option>
+            <option value ="6">6</option>
+            <option value ="7">7</option>
+            <option value ="8">8</option>
+            <option value ="9">9</option>
+            <option value ="10">10</option>
+            <option value ="11">11</option>
+            <option value ="12">12</option>
+            <option value ="13">13</option>
+            <option value ="14">14</option>
+            <option value ="15">15</option>
+            <option value ="16">16</option>
+            <option value ="17">17</option>
+            <option value ="18">18</option>
+            <option value ="19">19</option>
+            <option value ="20">20</option>
+            <option value ="21">21</option>
+            <option value ="22">22</option>
+            <option value ="23">23</option>
+            <option value ="24">24</option>
+            <option value ="25">25</option>
+            <option value ="26">26</option>
+            <option value ="27">27</option>
+            <option value ="28">28</option>
+            <option value ="29">29</option>
+            <option value ="30">30</option>
+            <option value ="31">31</option>
+        </select>
+        <label for="Month2">Month</label>
+        <select name="Month2" id="Month2" onchange="category9(this)">
+            <option disabled selected>Select</option>
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+            <option value ="4">4</option>
+            <option value ="5">5</option>
+            <option value ="6">6</option>
+            <option value ="7">7</option>
+            <option value ="8">8</option>
+            <option value ="9">9</option>
+            <option value ="10">10</option>
+            <option value ="11">11</option>
+            <option value ="12">12</option>
+        </select>
+        <label for="Year2">Year</label>
+        <select name="Year2" id="Year2" onchange="category10(this)">
+            <option disabled selected>Select</option>
+            <option value ="2020">2020</option>
+            <option value ="2021">2021</option>
+            </select>
+            <br></br>
+            <input type="submit" value="Submit"><br></br>
+
+    </form>
+    <Strong>Chosen Category:</Strong> {{ ProdCat }}
+    <br></br>
+    <Strong>Date From:</Strong> {{ datetime11 }} 
+    <br></br>
+    <Strong>To:</Strong> {{ datetime22 }}
+    <br></br>
+    <strong>Revenue in SGD: </strong> {{ revenue }}
+    <br></br>
+    <a href="home.html"><button>Back to Home</button></a>
+        
+{% endblock content%}

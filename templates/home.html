@@ -1,0 +1,24 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <h4><strong>Revenue break-up:</strong></h4>
+    <form id="revenue-breakup" action="" method="post">
+        <label for="revenue-breakup"></label>
+        <select name="revenue-breakup" id="revenue-breakup" onchange="category1(this.value)">
+            <option disabled selected>Select</option>
+            <option value ="Store-wise.html">Store Location-wise</option>
+            <option value ="Product-wise.html">Product Category-wise</option>
+            <option value ="Payment-wise.html">Payment method-wise</option>
+        </select>
+        <input type="reset" value="Reset" />
+        <br></br>
+        <script>
+        function category1(src) {
+            window.location=src;
+        }
+        </script>
+
+    </form>
+</div>
+{% endblock content%}
